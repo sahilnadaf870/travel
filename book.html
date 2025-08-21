@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Confirmed</title>
+  <link rel="stylesheet" href="bookstyle.css">
+</head>
+<body>
+  <div class="search-section">
+    <h2>Booking Confirmation</h2>
+    <p id="confirmationText"></p>
+    <a href="bookindex.html"><button>Back to Home</button></a>
+  </div>
+
+  <script>
+    const hotel = localStorage.getItem('bookedHotel');
+    document.getElementById('confirmationText').innerText = hotel 
+      ? `Your booking for "${hotel}" is confirmed!` 
+      : "No booking found.";
+  </script>
+</body>
+</html>

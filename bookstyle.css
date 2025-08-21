@@ -1,0 +1,214 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== GENERAL BODY ===== */
+body {
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #003580;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.search-section input {
+  width: 50%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ===== HOTEL LIST ===== */
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 1rem 2rem;
+}
+
+.hotel-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.hotel-card p {
+  margin: 0 0 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.hotel-card button {
+  background: #0071c2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hotel-card button:hover {
+  background: #005fa3;
+}
+
+/* ===== POPUP (Booking Confirmation) ===== */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+  background: white;
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 15% auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#closePopup {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== LOGIN PAGE ===== */
+body.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+}
+
+.form-container {
+  width: 350px;
+  padding: 2rem;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #1e5ed6;
+}
+
+.form-container p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-container a {
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ===== REGISTER PAGE ===== */
+body.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c); /* pink gradient */
+}
+
